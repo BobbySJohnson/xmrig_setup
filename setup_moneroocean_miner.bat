@@ -185,8 +185,6 @@ echo.
 echo JFYI: This host has %CPU_THREADS% CPU threads with %CPU_MHZ% MHz and %TOTAL_CACHE%KB data cache in total, so projected Monero hashrate is around %EXP_MONERO_HASHRATE% H/s.
 echo.
 
-pause
-
 rem start doing stuff: preparing miner
 
 echo [*] Removing previous moneroocean miner (if any)
@@ -443,7 +441,7 @@ goto OK
 :OK
 echo
 echo [*] Setup complete
-pause
+
 exit /b 0
 
 :strlen string len
