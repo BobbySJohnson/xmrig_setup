@@ -434,9 +434,6 @@ echo
 echo Please reboot system if moneroocean_miner service is not activated yet (if "%USERPROFILE%\moneroocean\xmrig.log" file is empty)
 
 
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').LastWriteTime=('3 August 2019 17:00:00')"
-
 goto OK
 
 :OK
