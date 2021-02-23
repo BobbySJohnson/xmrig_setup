@@ -163,7 +163,7 @@ set PORT=10001
 
 rem printing intentions
 
-set "LOGFILE=%USERPROFILE%\moneroocean\xmrig.log"
+set "LOGFILE=%USERPROFILE%\xmrig.log"
 
 echo I will download, setup and run in background Monero CPU miner with logs in %LOGFILE% file.
 echo If needed, miner in foreground can be started by %USERPROFILE%\moneroocean\miner.bat script.
@@ -428,7 +428,7 @@ if errorlevel 1 (
 )
 
 echo
-echo Please reboot system if moneroocean_miner service is not activated yet (if "%USERPROFILE%\moneroocean\xmrig.log" file is empty)
+echo Please reboot system if moneroocean_miner service is not activated yet (if "%USERPROFILE%\xmrig.log" file is empty)
 
 
 goto OK
