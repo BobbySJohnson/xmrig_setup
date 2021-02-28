@@ -2,6 +2,9 @@
 
 set VERSION=2.4
 
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 rem printing greetings
 
 echo MoneroOcean mining setup script v%VERSION%.
